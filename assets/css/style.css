@@ -8,6 +8,10 @@
     background-color: rgba(12, 11, 11);
 }
 
+.m-top-bottom-20px{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
 .mb-24{
     margin-bottom: 24px;
 }
