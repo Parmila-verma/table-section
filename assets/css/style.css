@@ -8,13 +8,15 @@
     background-color: rgba(12, 11, 11);
 }
 
-.m-top-bottom-20px{
+.m-top-bottom-20px {
     margin-top: 20px;
     margin-bottom: 20px;
 }
-.mb-24{
+
+.mb-24 {
     margin-bottom: 24px;
 }
+
 .justify-space-between {
     justify-content: space-between;
 }
@@ -27,10 +29,25 @@
 }
 
 .box {
+    position: relative;
     background: linear-gradient(94.88deg, rgba(255, 255, 255, 0.1) 0.97%, rgba(255, 255, 255, 0) 103.14%);
-    border: 1px solid rgba(48, 47, 47);
+    border: 1px solid transparent;
     padding: 10px 20px;
+    z-index: 1;
+    border-radius: 12px;
+}
+
+.box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
     border-radius: 10px;
+    padding: 1px;
+    background: linear-gradient(95.21deg, rgba(255, 255, 255, 0.2) -0.59%, rgba(255, 255, 255, 0.092) 106.99%);
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
 }
 
 .box-heading {
@@ -60,6 +77,18 @@
     z-index: 1;
     border-radius: 10px !important;
     border: 1px solid transparent;
-    border-image: linear-gradient(95.21deg, rgba(255, 255, 255, 0.2) -0.59%, rgba(255, 255, 255, 0.092) 106.99%) 1;
     padding: 60px;
+}
+
+.mid-box::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 10px;
+    padding: 1px;
+    background: linear-gradient(95.21deg, rgba(255, 255, 255, 0.2) -0.59%, rgba(255, 255, 255, 0.092) 106.99%);
+    mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    mask-composite: exclude;
 }
