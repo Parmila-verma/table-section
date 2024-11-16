@@ -121,9 +121,17 @@
 .w-100 {
     width: 100%;
 }
+.bg-black{
+    background-color: rgba(12, 11, 11) !important;
+}
 
 @media (max-width:992px) {
     .table-box::after{
         display: none;
+    }
+}
+@media (max-width:768px) {
+    .heading{
+        font-size: 30px;
     }
 }
